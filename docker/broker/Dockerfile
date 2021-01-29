@@ -1,4 +1,4 @@
-FROM pyaiot/base:latest
+FROM fjmolinas/base:latest
 
 LABEL maintainer="alexandre.abadie@inria.fr"
 

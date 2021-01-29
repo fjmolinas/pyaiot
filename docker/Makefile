@@ -4,7 +4,7 @@ PUSH_TARGETS = $(addprefix push-,$(CONTAINERS))
 BUILD_PUSH_TARGETS = $(addprefix buildx-push-,$(CONTAINERS))
 
 VERSION ?= latest
-DOCKERHUB ?= pyaiot
+DOCKERHUB ?= fjmolinas
 
 .PHONY: all build build-% push push-% buildx buildx%
 
