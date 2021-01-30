@@ -49,8 +49,7 @@ class DashboardHandler(web.RequestHandler):
     def get(self, path=None):
         self.render("dashboard.html",
                     wsproto="wss" if options.broker_ssl else "ws",
-                    wsserver="{}:{}".format(options.broker_host,
-                                            options.broker_port),
+                    wsserver="{}".format(options.broker_host),
                     camera_url=options.camera_url,
                     favicon=options.favicon,
                     logo_url=options.logo,
