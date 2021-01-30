@@ -6,7 +6,7 @@ RUN apt-get install -y curl
 RUN curl -sL https://deb.nodesource.com/setup_13.x | bash -
 RUN apt-get install -y nodejs
 
-RUN cd /opt && git clone https://github.com/pyaiot/pyaiot
+RUN cd /opt && git clone https://github.com/fjmolinas/pyaiot
 RUN cd /opt/pyaiot/pyaiot/dashboard/static && npm install && cd
 
 ADD run.sh /run.sh
