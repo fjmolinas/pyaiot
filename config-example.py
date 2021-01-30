@@ -52,12 +52,6 @@
 # The web interface listens on this port for HTTP connections.
 #web_port = 8080
 
-# Broker SSL
-# When enabled, the URI to the broker is supplied with wss to indicate to use
-# SSL to connect to the broker. Use this when you have a reverse proxy in front
-# of the dashboard to handle SSL termination.
-#broker_ssl=False
-
 # Camera URL
 # The HTTP clients get this URL for their connection to webcam images. If None
 # is configured, no webcam functionality is configured

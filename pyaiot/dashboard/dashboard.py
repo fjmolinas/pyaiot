@@ -48,7 +48,6 @@ class DashboardHandler(web.RequestHandler):
 
     def get(self, path=None):
         self.render("dashboard.html",
-                    wsproto="wss" if options.broker_ssl else "ws",
                     wsserver="{}".format(options.broker_host),
                     camera_url=options.camera_url,
                     favicon=options.favicon,
@@ -88,9 +87,6 @@ def extra_args():
     if not hasattr(options, "web_port"):
         define("web_port", default=8080,
                help="Web application HTTP port")
-    if not hasattr(options, "broker_ssl"):
-        define("broker_ssl", type=bool, default=False,
-               help="Supply the broker websocket with ssl")
     if not hasattr(options, "camera_url"):
         define("camera_url", default=None,
                help="Default camera url")
