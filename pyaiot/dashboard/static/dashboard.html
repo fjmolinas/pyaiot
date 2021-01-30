@@ -489,7 +489,7 @@ update_live_camera_content(vm.camUrl, vm.showCam)
 $.material.init()
 
 var protocol = window.location.protocol === 'https:' ? 'wss://' : 'ws://';
-var ws = new WebSocket(protocol + '{{ wsserver }}/ws')
+var ws = new WebSocket(protocol + window.location.host + '/ws')
 
 ws.onopen = function() {
     console.log("WebSocket is ready")
